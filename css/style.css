@@ -8,6 +8,20 @@ html {
     background: #f5f5f5;
 }
 
+.title {
+    font-size: 48px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    justify-content: center;
+    align-content: center;
+    display: flex;
+  }  
+
 button {
     font-size: 100%;
     padding: 0;
@@ -19,6 +33,59 @@ button:hover {
     cursor: pointer;
 }
 
+input, button {
+    ontline: 0;
+}
+
 li {
     list-style: none;
 }
+
+.input {
+    padding: 0 10px;
+    height: 40px;
+    width: 350px;
+    margin-right: 10px;
+    border: 1px solid #e6ecf0;
+}
+
+.container {
+    padding: 0 20px;
+}
+
+.flex-container{
+    display: flex;
+    margin: 50px auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin-bottom: 20px;
+    width: 300px;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .card ul li {
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    background: #e5eff7;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .fa-plus-square {
+    font-size: 40px;
+  }
+  

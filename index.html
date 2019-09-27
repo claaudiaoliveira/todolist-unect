@@ -9,34 +9,36 @@
     <script src="https://kit.fontawesome.com/4d2ed99049.js"></script>
 </head>
 <body>
-    <div>
-        <h1>TODO APP</h1>
-    </div>
-    <div>
-        <input type="text" name="caixa-de-texto" placeholder="Adicione um novo todo">
-        <button type="button" class="add-button"><i class="fas fa-plus-square"></i></button>
-    </div>
-    <div> 
-        <h2>TO DO</h2>
-        <ul>
-            <li>Revisar HTML e CSS</li>
-            <li>Fazer o Todo App</li>
-            <li>Postar meu código no GitHub</li>
-            <li>Ir na aula de JS</li>
-        </ul>
-    </div>
-    <div>
-        <h2>DOING</h2>
-        <ul>
-            <li>Ir na aula de HTML e CSS</li>
-        </ul>
-    </div>
-    <div>
-        <h2>DONE</h2>
-        <ul>
-            <li>Ir na reunião de projetos</li>
-            <li>Ir na aula de Git</li>
-        </ul>
+    <div class="container">
+        <h1 class="title">TODO APP</h1>
+        <div class="header">
+            <input class="input" type="text" name="caixa-de-texto" placeholder="Adicione um novo todo">
+            <button type="button" class="add-button"><i class="fa fa-plus-square"></i></button>
+        </div>
+        <div class="flex-container">
+            <div class="card"> 
+                <h2 class="card-title">TO DO</h2>
+                <ul>
+                    <li>Revisar HTML e CSS <button><i class="fa fa-chevron-circle-right"></i></button></li>
+                    <li>Fazer o Todo App <button><i class="fa fa-chevron-circle-right"></i></button></li>
+                    <li>Postar meu código no GitHub <button><i class="fa fa-chevron-circle-right"></i></button></li>
+                    <li>Ir na aula de JS <button><i class="fa fa-chevron-circle-right"></i></button></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2 class="card-title">DOING</h2>
+                <ul>
+                    <li>Ir na aula de HTML e CSS <button><i class="fa fa-chevron-circle-right"></i></button></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2 class="card-title">DONE</h2>
+                <ul>
+                    <li>Ir na reunião de projetos <button><i class="fa fa-times-circle"></i></button></li>
+                    <li>Ir na aula de Git <button><i class="fa fa-times-circle"></i></button></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>
