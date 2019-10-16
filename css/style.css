@@ -5,15 +5,15 @@
 
 html {
     height: 100%;
-    background: #f5f5f5;
+    background: #FFE4C4;
 }
 
 .title {
-    font-size: 48px;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    font-size: 70px;
+    margin-top: 45px;
+    margin-bottom: 25px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Asenine', Arial, Helvetica, sans-serif;
 }
 
 .header {
@@ -37,16 +37,14 @@ input, button {
     ontline: 0;
 }
 
-li {
-    list-style: none;
-}
-
 .input {
     padding: 0 10px;
     height: 40px;
     width: 350px;
     margin-right: 10px;
     border: 1px solid #e6ecf0;
+    font-size: 17px;
+    font-family: Agency FB, Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -65,27 +63,28 @@ li {
     width: 300px;
     padding: 20px;
     background: rgb(255, 255, 255);
-    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
-  }
+    box-shadow: 0px 0px 5px 5px rgb(255, 221, 179);
+    border-radius: 12px;
+}
 
-  .card h2 {
-    font-size: 24px;
+.card h2 {
+    font-size: 35px;
     margin-bottom: 20px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+    font-family: 'Asenine', Arial, Helvetica, sans-serif;
+}
 
-  .card ul li {
-    font-size: 18px;
+.card li {
+    font-size: 20px;
     padding: 10px;
     margin-top: 10px;
     border-radius: 20px;
-    background: #e5eff7;
+    background: #f28d8d;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+    font-family: Agency FB, Arial, Helvetica, sans-serif;
+    list-style: none;
+}
 
-  .fa-plus-square {
+.fa-plus-square {
     font-size: 40px;
-  }
-  
+}

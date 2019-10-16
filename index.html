@@ -4,41 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Todo List</title>
+    <title>ToDo List</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/4d2ed99049.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1 class="title">TODO APP</h1>
+        <h1 class="title">ToDo App</h1>
+
         <div class="header">
-            <input class="input" type="text" name="caixa-de-texto" placeholder="Adicione um novo todo">
+            <input id="descricao" class="input" type="text" placeholder="Adicione um novo ToDo">
             <button type="button" class="add-button"><i class="fa fa-plus-square"></i></button>
         </div>
+
         <div class="flex-container">
             <div class="card"> 
                 <h2 class="card-title">TO DO</h2>
-                <ul>
-                    <li>Revisar HTML e CSS <button><i class="fa fa-chevron-circle-right"></i></button></li>
-                    <li>Fazer o Todo App <button><i class="fa fa-chevron-circle-right"></i></button></li>
-                    <li>Postar meu código no GitHub <button><i class="fa fa-chevron-circle-right"></i></button></li>
-                    <li>Ir na aula de JS <button><i class="fa fa-chevron-circle-right"></i></button></li>
+                <ul id="toDo">
+                    <li>
+                        Revisar HTML e CSS <button><i class="fa fa-angle-double-right"></i></button>
+                    </li>
+                    <li>
+                        Fazer o Todo App <button><i class="fa fa-angle-double-right"></i></button>
+                    </li>
+                    <li>
+                        Postar meu código no GitHub <button><i class="fa fa-angle-double-right"></i></button>
+                    </li>
+                    <li>
+                        Ir na aula de JS <button><i class="fa fa-angle-double-right"></i></button>
+                    </li>
                 </ul>
             </div>
             <div class="card">
                 <h2 class="card-title">DOING</h2>
-                <ul>
-                    <li>Ir na aula de HTML e CSS <button><i class="fa fa-chevron-circle-right"></i></button></li>
+                <ul id="doing">
+                    <li>
+                        Ir na aula de HTML e CSS <button><i class="fa fa-angle-double-right"></i></button>
+                    </li>
                 </ul>
             </div>
             <div class="card">
                 <h2 class="card-title">DONE</h2>
-                <ul>
-                    <li>Ir na reunião de projetos <button><i class="fa fa-times-circle"></i></button></li>
-                    <li>Ir na aula de Git <button><i class="fa fa-times-circle"></i></button></li>
+                <ul id="done">
+                    <li>
+                        Ir na reunião de projetos <button><i class="fa fa-times"></i></button>
+                    </li>
+                    <li>
+                        Ir na aula de Git <button><i class="fa fa-times"></i></button>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
