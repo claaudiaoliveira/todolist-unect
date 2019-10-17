@@ -81,6 +81,7 @@ input, button {
     border-radius: 20px;
     background: #f28d8d;
     text-align: center;
+    word-wrap: break-word;
     font-family: Agency FB, Arial, Helvetica, sans-serif;
     list-style: none;
 }

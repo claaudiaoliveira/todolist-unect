@@ -1,54 +1,16 @@
 const inputToDo = document.querySelector('div.header input')
 const btAdd= document.querySelector('div.header button')
 const toDo = document.querySelector('#toDo');
-const btToDo = document.querySelector('#toDo button')
 const doing = document.querySelector('#doing');
-const btDoing= document.querySelector('#doing button')
 const done = document.querySelector('#done');
-const btDone= document.querySelector('#done button')
-
-const save = () => {
-
-    let listasTransformadas = Array.from(listas)
-        .map(lista => {
-            return {
-                nomeLista: lista.getAttribute('id'),
-                itens: Array.from(lista.children)
-                    .map(filho => {
-                        const [descricao] = filho.querySelectorAll('p')
-                        return {
-                            descricao: descricao.textContent,
-                        }
-                    })
-            }
-        })
-
-    localStorage.setItem('lista', JSON.stringify(listasTransformadas))
-}
-
-const load = () => {
-    let listas = JSON.parse(localStorage.getItem('lista'))
-    if (listas) {
-        listas.forEach(lista => {
-            let listaElemento = document.querySelector(`#${lista.nomeLista}`)
-            lista.itens.forEach(item => {
-                criarItem(item.descricao, listaElemento)
-            })
-
-        })
-
-    }
-
-}
 
 const excluirItem = (item) => {
-
     let animation = item.animate([{
         opacity: '1',
         transform: 'scale(1)'
     }, {
         opacity: '0',
-        transform: 'scale(0.8)'
+        transform: 'scale(0.7)'
     }], 200)
 
     animation.onfinish = () => {
@@ -68,13 +30,14 @@ const criarItem = (descricao) => {
     inputToDo.textContent = descricao
     li.append(descricao,' ', button)
 
+    button.onclick = () => irDoing(li, descricao)
+
     toDo.appendChild(li)
 }
 
 const adicionarItem = () => {
     if (inputToDo.value) {
         criarItem(inputToDo.value)
-        save()
         inputToDo.value = ''
     } else {
         alert('Preencha o campo!')
@@ -83,20 +46,32 @@ const adicionarItem = () => {
 
 btAdd.onclick = adicionarItem
 
-const transicaoLista = nomeLista => {
+const irDoing = (item, descricao) => {
+    const li = document.createElement('li')
+    const button = document.createElement('button')
+    const btDoing = document.createElement('i')
+  
+    btDoing.setAttribute('class', 'fa fa-angle-double-right')
+    button.appendChild(btDoing)
+    button.onclick = () => irDone(li, descricao)
+  
+    li.append(descricao,' ', button)
+  
+    doing.appendChild(li)
+    toDo.removeChild(item)
+  }
 
-    listas.forEach(lista => lista.classList.add('hidden'))
-
-    let listaSelecionada = document.querySelector(`#${nomeLista}`)
-
-    listaSelecionada.classList.remove('hidden')
-
-    icone.setAttribute('src', `./assets/imgs/${nomeLista}.svg`)
-
-}
-
-adicionarBt.onclick = adicionarLista
-
-selectListas.onchange = () => transicaoLista(selectListas.value)
-
-load()
+const irDone = (item, descricao) => {
+    const li = document.createElement('li')
+    const button = document.createElement('button')
+    const btDone = document.createElement('i')
+  
+    btDone.setAttribute('class', 'fa fa-times')
+    button.appendChild(btDone)
+    button.onclick = () => excluirItem(li)
+  
+    li.append(descricao,' ', button)
+  
+    done.appendChild(li)
+    doing.removeChild(item)
+  }
